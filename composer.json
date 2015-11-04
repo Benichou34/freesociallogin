@@ -2,7 +2,7 @@
 	"name" : "Benichou34/freesociallogin",
 	"description" : "Free social login module for Prestashop",
 	"homepage" : "https://github.com/Benichou34/freesociallogin",
-	"license" : "AFL - Academic Free License (AFL 3.0)",
+	"license" : "MIT",
 	"require" : {
 		"php" : ">=5.4",
 		"facebook/php-sdk-v4" : "5.1.0",
@@ -11,5 +11,10 @@
 	"config" : {
 		"preferred-install" : "dist"
 	},
-	"type" : "prestashop-module"
+	"type" : "prestashop-module",
+	"authors" : [{
+			"email" : "benichou.software@gmail.com",
+			"name" : "Benichou"
+		}
+	]
 }
