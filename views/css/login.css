@@ -1,0 +1,14 @@
+.top_free_social_login {
+	margin:10px;
+}
+.nav_free_social_login {
+    float: right;
+    padding: 8px 10px;
+    line-height: 18px;
+    color: white;
+}
+.myaccount-link-list .account_social_login img {
+	position: absolute;
+	margin: 1px 1px 1px 1px;
+	border-radius: 4px;
+}

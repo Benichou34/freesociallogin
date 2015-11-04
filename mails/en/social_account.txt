@@ -1,0 +1,36 @@
+
+[{shop_url}] 
+
+Hi {firstname} {lastname},
+
+Thank you for associating your {provider} account with {shop_name}.
+
+You can also connect directly to your customer account on {shop_name}.
+
+Here are your login details:
+
+E-MAIL ADDRESS: {email}
+
+PASSWORD: {passwd}
+
+Important Security Tips:
+
+* Always keep your account details safe.
+
+* Never disclose your login details to anyone.
+
+* Change your password regularly.
+
+* Should you suspect someone is using your account illegally, please
+notify us immediately.
+
+You can now place orders on our shop: {shop_name}
+[{shop_url}]
+
+At any time you can revoke your {provider} permission from
+your {shop_name} customer account by clicking "My account":
+[{my_account_url}]
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+
