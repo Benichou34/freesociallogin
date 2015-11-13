@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ea0ed09072c40ff1651a342e30390f9e",
-    "content-hash": "9c8af436e4e7ca72f61b764079bff873",
+    "hash": "95319dd4cb5a71c52d79152908f643af",
+    "content-hash": "4efd1db7bf270eed3cee653b7b0008aa",
     "packages": [
         {
             "name": "facebook/php-sdk-v4",
-            "version": "5.1.0",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/facebook-php-sdk-v4.git",
-                "reference": "cc551f793492fa92ca107d596a6f1e3a62fb894c"
+                "reference": "8d74588f2f88980c3504333111523ca231796a72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/cc551f793492fa92ca107d596a6f1e3a62fb894c",
-                "reference": "cc551f793492fa92ca107d596a6f1e3a62fb894c",
+                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/8d74588f2f88980c3504333111523ca231796a72",
+                "reference": "8d74588f2f88980c3504333111523ca231796a72",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,7 @@
                 "facebook",
                 "sdk"
             ],
-            "time": "2015-10-13 22:11:58"
+            "time": "2015-11-12 19:21:46"
         },
         {
             "name": "google/apiclient",

@@ -2,7 +2,7 @@
 <module>
     <name>freesociallogin</name>
     <displayName><![CDATA[Free Social Login]]></displayName>
-    <version><![CDATA[1.0]]></version>
+    <version><![CDATA[1.1]]></version>
     <description><![CDATA[Allows customers to login/signup using a Facebook or Google account]]></description>
     <author><![CDATA[Benichou]]></author>
     <tab><![CDATA[social_networks]]></tab>

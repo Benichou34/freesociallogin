@@ -18,7 +18,7 @@ The Free social login module can be installed with [Composer](https://getcompose
 composer require Benichou34/freesociallogin
 ```
 
-Or you can download the lastest release [Here](http://github.benichou-software.com/freesociallogin_10.zip).
+Or you can download the lastest release [Here](https://github.com/Benichou34/freesociallogin/releases/latest).
 
 For more details, see [How to install a module on PrestaShop](http://addons.prestashop.com/en/content/21-how-to).
 

@@ -36,14 +36,14 @@ include_once(__DIR__.'/google/google.php');
 class FreeSocialLogin extends Module
 {
 	private $socialNetworkList = array();
-	
+
 	public function __construct()
 	{
 		$this->bootstrap = true;
 		$this->name = 'freesociallogin';
 		$this->tab = 'social_networks';
 		$this->author = 'Benichou';
-		$this->version = '1.0';
+		$this->version = '1.1';
 
 		parent::__construct();
 		$this->displayName = $this->l('Free Social Login');
@@ -105,7 +105,7 @@ class FreeSocialLogin extends Module
 
 		return parent::uninstall();
 	}
-	
+
 
 	public function getContent()
 	{
@@ -215,7 +215,7 @@ class FreeSocialLogin extends Module
 
 		return $helper->generateForm($fields_forms);
 	}
-	
+
 	// This source code come from processSubmitLogin in AuthControllerCore
 	private function processLogin($customer)
 	{
@@ -263,7 +263,7 @@ class FreeSocialLogin extends Module
 			$context->cookie->id_cart = (int)$context->cart->id;
 			$context->cart->autosetProductAddress();
 		}
-		
+
 		$context->cookie->write();
 
 		Hook::exec('actionAuthentication');
@@ -279,7 +279,7 @@ class FreeSocialLogin extends Module
 
 		if(!$social_customer || !$social_customer->id_user)
 			FSLTools::returnError(Tools::displayError('Invalid social account'));
-			
+
 		$customer = null;
 
 		if($social_customer->id_customer)
@@ -403,7 +403,7 @@ class FreeSocialLogin extends Module
 		$this->context->smarty->assign(array(
 			'sub_templates' => $subTemplates
 		));
-		
+
 		return $this->display(__FILE__, $template);
 	}
 

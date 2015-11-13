@@ -63,7 +63,7 @@ class Facebook implements SocialNetwork
 		$this->context = $context ? $context : Context::getContext();
 		$this->_module = $module;
 		$this->_path = $module->getPathUri().'facebook/';
-	
+
 		$this->_appid = Configuration::get('FSL_FACEBOOK_APPID');
 		$this->_appkey = Configuration::get('FSL_FACEBOOK_APPKEY');
 		$this->_appscope = "public_profile,email,".Configuration::get('FSL_FACEBOOK_SCOPE');
@@ -109,14 +109,14 @@ class Facebook implements SocialNetwork
 			return false;
 
 		$this->context->smarty->assign(array(
-				'facebook_id' => $social_customer->id_user,
-				'facebook_username' => $social_customer->username,
-				'facebook_picture_url' => $social_customer->picture_url,
-				'facebook_like' => $social_customer->like
+			'facebook_id' => $social_customer->id_user,
+			'facebook_username' => $social_customer->username,
+			'facebook_picture_url' => $social_customer->picture_url,
+			'facebook_like' => $social_customer->like
 		));
 
 		return true;
-	}	
+	}
 
 	public function hookTop($params)
 	{
@@ -232,7 +232,7 @@ class Facebook implements SocialNetwork
 		$facebookApi = new Facebook\Facebook([
 			'app_id' => $this->_appid,
 			'app_secret' => $this->_appkey,
-			'default_graph_version' => 'v2.2'
+			'default_graph_version' => 'v2.5'
 		]);
 
 		if(!$accessToken)
@@ -264,7 +264,7 @@ class Facebook implements SocialNetwork
 
 		try
 		{
-			$response = $facebookApi->get('/me');	
+			$response = $facebookApi->get('/me?fields=id,name,email,first_name,last_name,gender');
 			$user = $response->getGraphUser();
 
 			$social_customer = new FacebookCustomer();
@@ -293,7 +293,7 @@ class Facebook implements SocialNetwork
 
 				if($user->getGender())
 					$social_customer->id_gender = ($user->getGender() == 'female')?2:1; // gender
-				
+
 				if($user->getBirthday())
 				{
 					$birth_date = explode('/', $user->getBirthday()); // birthday : MM/DD/YYYY
@@ -348,7 +348,7 @@ class Facebook implements SocialNetwork
 				FSLTools::returnError(Tools::displayError('Facebook SDK returned an error: ') . $e->getMessage());
 			}
 		}
-			
+
 		return $social_customer;
 	}
 }
